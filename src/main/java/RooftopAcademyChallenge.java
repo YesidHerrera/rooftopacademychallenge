@@ -73,7 +73,7 @@ public class RooftopAcademyChallenge {
 
     public static String callTokenEndPoint(){
         try {
-            HttpURLConnection connection = (HttpURLConnection) new URL(RooftopAcademyChallenge.APP_URL + "token?email=yesidregis2@gmail.com").openConnection();
+            HttpURLConnection connection = (HttpURLConnection) new URL(RooftopAcademyChallenge.APP_URL + "token?email=yesidregis@gmail.com").openConnection();
             connection.setRequestMethod("GET");
             return new ObjectMapper().readTree(connection.getInputStream()).get("token").asText();
         } catch (IOException e) {
